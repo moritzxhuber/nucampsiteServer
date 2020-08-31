@@ -8,6 +8,7 @@ const config = require("./config");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 const campsiteRouter = require("./routes/campsiteRouter");
+const favoriteRouter = require("./routes/favoriteRouter");
 const promotionRouter = require("./routes/promotionRouter");
 const partnerRouter = require("./routes/partnerRouter");
 const uploadRouter = require("./routes/uploadRouter");
@@ -59,6 +60,7 @@ app.use("/users", usersRouter);
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/campsites", campsiteRouter);
+app.use("/favorites", favoriteRouter);
 app.use("/promotions", promotionRouter);
 app.use("/partners", partnerRouter);
 app.use("/imageUpload", uploadRouter);
